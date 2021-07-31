@@ -12,11 +12,8 @@
 	<div id="header">
 			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
 			<span class="wel_word">订单管理系统</span>
-			<div>
-				<a href="book_manager.jsp">图书管理</a>
-				<a href="order_manager.jsp">订单管理</a>
-				<a href="../../index.jsp">返回商城</a>
-			</div>
+			<%-- 静态包含manage管理模块的菜单 --%>
+			<%@include file="/pages/common/manage_menu.jsp"%>
 	</div>
 	
 	<div id="main">

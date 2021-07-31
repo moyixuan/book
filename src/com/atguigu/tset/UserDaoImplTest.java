@@ -26,6 +26,7 @@ public class UserDaoImplTest {
         System.out.println(" hot-fix Git! Commit 4");
         System.out.println(" push Git! Commit 4");
         System.out.println(" 网页修改 pull git! Commit 6");
+        System.out.println(" gitee push git! Commit 1");
     }
 
     @Test

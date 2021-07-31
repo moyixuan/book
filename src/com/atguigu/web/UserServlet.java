@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 /**
  * @author moyixuan
@@ -91,12 +92,23 @@ public class UserServlet extends HttpServlet {
         // 获取表单的name是action的隐藏框的值，判断一个执行那个方法
         String action = request.getParameter("action");
 
-        if ("login".equals(action)){
+        /*if ("login".equals(action)){
             // 登录
             login(request,response);
         } else if("regist".equals(action)){
             // 注册
             regist(request,response);
+        }*/
+
+        // 利用反射进行优化，关注于业务代码
+        try {
+            // 获取 action 业务鉴别字符串，获取相应的业务 方法反射对象
+            Method method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);
+
+            // 调用目标业务 方法
+            method.invoke(this,request,response);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

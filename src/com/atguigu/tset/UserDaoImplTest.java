@@ -22,6 +22,7 @@ public class UserDaoImplTest {
         System.out.println(" Hello Git! ");
         System.out.println(" Hello Git! Commit 3");
         System.out.println(" Hello Git! Commit 4");
+        System.out.println(" hot-fix Git! Commit 4");
     }
 
     @Test

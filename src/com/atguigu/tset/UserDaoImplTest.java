@@ -20,6 +20,7 @@ public class UserDaoImplTest {
     public void queryUserByUsernameAndPassword() {
         System.out.println(userDao.queryUserByUsernameAndPassword("admin","admin"));
         System.out.println(" Hello Git! ");
+        System.out.println(" Hello Git! Commit 3");
     }
 
     @Test
